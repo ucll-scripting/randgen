@@ -22,4 +22,12 @@ setup(name='randgen',
       author_email='frederic.vogels@ucll.be',
       license='MIT',
       packages=['randgen'],
+      entry_points = {
+            'console_scripts': [ 'randgen=randgen.shell:main' ]
+      },
+      include_package_data=True,
+      package_data={ '': ['data/*.txt'] },
+      install_requires=[
+          'lazy',
+      ],
       zip_safe=False)
